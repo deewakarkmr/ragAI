@@ -1,0 +1,20 @@
+{
+  "installCommand": "npm install",
+  "buildCommand": "npm --prefix client install && npm --prefix client run build",
+  "outputDirectory": "client/dist",
+  "functions": {
+    "api/chat.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

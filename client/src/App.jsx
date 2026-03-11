@@ -34,7 +34,7 @@ export default function App() {
           data = JSON.parse(raw);
         } catch (_error) {
           throw new Error(
-            `Server returned non-JSON response (status ${response.status}). Make sure backend is running on port 4000.`
+            `Server returned non-JSON response (status ${response.status}). Check API deployment logs.`
           );
         }
       }
